@@ -40,7 +40,7 @@ export class ProjetListeComponent {
     },
     {
       name: 'POC Highchart Angular',
-      descripition: `Ce POC a été développé afin de tester la faisabilité de déplacer plusieurs points sur un graphe (soit en les sélectionnant, à un index en particulier ou bien dans une zone dite de travail)`,
+      descripition: `Ce POC a été développé pour évaluer la faisabilité de déplacer plusieurs points sur un graphe, soit en les sélectionnant individuellement, à un index spécifique, ou au sein d'une zone de travail définie.`,
       link: 'https://github.com/silvanic/Highchart_Angular_Playground',
       stack: ['Angular', 'Highchart', 'Typescript'],
       img: 'assets/img/highchart_angular.png',
