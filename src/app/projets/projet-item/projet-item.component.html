@@ -17,6 +17,19 @@
     <p class="font-normal text-lg text-600 mt-0 mb-0">
       {{ projet.descripition }}
     </p>
+    <p class="font-normal text-lg text-600 mt-0 mb-0">
+      {{ projet.descripition }}
+    </p>
+    <p>
+      <a
+        [href]="projet.link"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="p-2"
+      >
+        {{ projet.link }}
+      </a>
+    </p>
     <div class="flex flex-row flex-wrap mt-auto">
       <p-chip
         *ngFor="let item of projet.stack"
