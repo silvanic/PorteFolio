@@ -1,0 +1,76 @@
+<p-panel [toggleable]="true" toggler="header" [collapsed]="true">
+  <ng-template pTemplate="header">
+    <div class="flex flex-column">
+      <span class="font-bold text-xl white-space-nowrap">
+        {{ projet?.name }}
+      </span>
+    </div>
+  </ng-template>
+  <ul class="list-none p-0 m-0">
+    <li
+      class="flex align-items-center py-3 px-2 surface-border flex-wrap border-bottom-3"
+    >
+      <div class="text-500 w-6 md:w-2 font-medium">Description</div>
+      <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">
+        {{ projet?.descripition }}
+      </div>
+    </li>
+    <li
+      class="flex align-items-center py-3 px-2 surface-border flex-wrap border-bottom-3"
+    >
+      <div class="text-500 w-6 md:w-2 font-medium">Lien</div>
+      <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">
+        <a
+          [href]="projet?.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="p-2"
+        >
+          {{ projet?.link }}
+        </a>
+      </div>
+    </li>
+    <li
+      *ngIf="projet.stack.length > 0"
+      class="flex align-items-center py-3 px-2 surface-border flex-wrap"
+    >
+      <div class="text-500 w-6 md:w-2 font-medium">Environnement</div>
+      <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">
+        <p-chip
+          *ngFor="let item of projet.stack"
+          [label]="item"
+          class="mr-2"
+        ></p-chip>
+      </div>
+    </li>
+  </ul>
+</p-panel>
+
+<article
+  class="flex flex-column md:flex-row w-full gap-3 p-3 border-round border-1 surface-border mb-3 ng-star-inserted"
+>
+  <div *ngIf="projet.img" class="relative mr-2">
+    <img
+      alt="Image"
+      class="border-round w-full h-full md:w-14rem md:h-14rem"
+      [src]="projet.img"
+    />
+  </div>
+  <div class="flex flex-column w-full gap-3">
+    <div class="flex w-full justify-content-between align-items-center">
+      <p class="font-semibold text-lg mt-0 mb-0 mr-3">
+        {{ projet.name }}
+      </p>
+    </div>
+    <p class="font-normal text-lg text-600 mt-0 mb-0">
+      {{ projet.descripition }}
+    </p>
+    <div class="flex flex-row flex-wrap mt-auto">
+      <p-chip
+        *ngFor="let item of projet.stack"
+        [label]="item"
+        class="mr-2 mb-2"
+      ></p-chip>
+    </div>
+  </div>
+</article>
