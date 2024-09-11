@@ -1,16 +1,16 @@
 <p-card>
   <ng-template pTemplate="header">
     <div
-      class="col-12 md:col-6 pl-6 text-center md:text-left flex align-items-center"
+      class="col-12 md:col-6 pl-0 sm:pl-3 uppercase text-center text-center sm:text-left flex justify-content-center sm:justify-content-start"
     >
-      <h1>Expérience</h1>
+      <h1 class="text-3xl">Expérience</h1>
     </div>
   </ng-template>
 
-  <p-card header="Open (mars 2018 à ce jour)" styleClass="ml-4">
+  <p-card header="Open (mars 2018 à ce jour)" styleClass="ml-1 sm:ml-4">
     <app-experience-item
       header="De mars 2024 à juillet 2024, pour l'ANF"
-      poste="Développeur Front Angular"
+      poste="Développeur Front"
       organisation="Equipe d'une dizaine de personnes dont 5 développeurs. En mode
       agile, avec des sprints de 3 semaines accompagné de Sprint Planning
       Meeting, Rétro et cadrage."
@@ -42,7 +42,7 @@
 
     <app-experience-item
       header="De septembre 2023 à février 2024, pour le CNC"
-      poste="Développeur Front React"
+      poste="Développeur Front"
       organisation="Equipe d'une vingtaine de personnes dont 10 développeurs. En mode
       agile, avec des sprints de 3/4 semaines accompagné de Sprint
       Planning Meeting, Rétro et cadrage."
@@ -68,7 +68,7 @@
 
     <app-experience-item
       header="De décembre 2021 à septembre 2023, pour ANCV"
-      poste=" Développeur Front React/Next"
+      poste=" Développeur Front"
       organisation="Équipe d'une quinzaine de personnes, répartie sur trois sites (Rennes, Lannion et Paris). 
       Travail en mode agile avec des sprints de 3/4 semaines, incluant Sprint Planning, 
       rétrospectives et cadrage."
@@ -103,7 +103,7 @@
 
     <app-experience-item
       header="De août 2021 à octobre 2021, pour ANTAI"
-      poste="Développeur Back Java Spring Boot"
+      poste="Développeur Back"
       organisation="Equipe d'une dizaine de personnes. En mode agile"
       mission="Evolution d’une application existante sur le périmètre ANTAI."
       [activites]="[
@@ -126,7 +126,7 @@
 
     <app-experience-item
       header="De décembre 2020 à juillet 2021, pour CNC"
-      poste="Développeur Fullstack et ETL"
+      poste="Développeur Fullstack"
       organisation="Equipe d'une vingtaine de personnes (développeurs, fonctionels, testeurs...). En mode agile"
       mission="Développement et maintien de multiples applications (web, serveur, rapports SSRS, ETL)"
       [activites]="[
@@ -154,7 +154,7 @@
 
     <app-experience-item
       header="De 2017 à juin 2020, pour ENIM"
-      poste="Développeur Fullstack Java/jQuery"
+      poste="Développeur Fullstack"
       organisation="Collaboration avec une équipe de 5 développeurs, sous la direction de plusieurs chefs de projet et d’un architecte technique."
       mission="Développer et maintenir plusieurs applications web pour automatiser et optimiser le suivi des démarches administratives pour l'ENIM (marins, tiers, etc.)."
       [activites]="[
@@ -183,9 +183,12 @@
     </app-experience-item>
   </p-card>
 
-  <p-card header="NCI (Octobre 2014 à septembre 2015)" styleClass="ml-4">
+  <p-card
+    header="NCI (Octobre 2014 à septembre 2015)"
+    styleClass="ml-1 sm:ml-4"
+  >
     <app-experience-item
-      poste="Développeur d'application Delphi"
+      poste="Développeur d'application"
       organisation="Equipe de 5 développeurs dont un chef d'équipe et un responsable technique"
       mission="Développer des fonctionnalités et mettre en place des test intégrations pour diverses applications pour le pôle Transport"
       [activites]="[
@@ -206,7 +209,7 @@
 
   <p-card
     header="Androme Informatique (janvier 2014 à mars 2014)"
-    styleClass="ml-4"
+    styleClass="ml-1 sm:ml-4"
   >
     <app-experience-item
       poste="Développeur Web"
@@ -231,7 +234,10 @@
     </app-experience-item>
   </p-card>
 
-  <p-card header="Rectorat de Caen (mai 2013 à juin 2013)" styleClass="ml-4">
+  <p-card
+    header="Rectorat de Caen (mai 2013 à juin 2013)"
+    styleClass="ml-1 sm:ml-4"
+  >
     <app-experience-item
       poste="Développeur Web"
       organisation="Autonomie accompagné du Pôle DSI"
@@ -257,7 +263,14 @@
 
   <p-divider />
 
-  <p-card header="Formations & certifications" class="ml-4">
+  <p-card class="ml-1 sm:ml-4">
+    <ng-template pTemplate="header">
+      <div
+        class="col-12 md:col-6 pl-0 sm:pl-3 uppercase text-center text-center sm:text-left flex justify-content-center sm:justify-content-start"
+      >
+        <h1 class="text-3xl">Formations & certifications</h1>
+      </div>
+    </ng-template>
     <p-timeline [value]="formationsCertifications">
       <ng-template pTemplate="content" let-event>
         <div class="flex flex-column mb-5">
