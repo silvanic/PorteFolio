@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CardModule } from 'primeng/card';
 import { ProjetItemComponent } from '../projet-item/projet-item.component';
+import { DividerModule } from 'primeng/divider';
 
 export interface IProjet {
   name: string;
@@ -13,7 +14,7 @@ export interface IProjet {
 @Component({
   selector: 'app-projet-liste',
   standalone: true,
-  imports: [CardModule, ProjetItemComponent],
+  imports: [CardModule, ProjetItemComponent, DividerModule],
   templateUrl: './projet-liste.component.html',
   styleUrl: './projet-liste.component.scss',
 })
@@ -24,7 +25,7 @@ export class ProjetListeComponent {
       descripition: `Un simple Planning Poker où l'on peut personnaliser la valeur 
       des cartes, partager un lien pour rejoindre la salle, mettre à jour la 
       configuration de la salle en temps réel. Largement inspiré d'autres Planning Poker mais 
-      simplifié. Une seconde version est en cours de développement en remplacant Angular Material afin d'améliorer
+      simplifié. Une seconde version est en cours de développement en remplacant Angular Material par PrimeNG afin d'améliorer
       l'interface`,
       link: 'https://planning-poking.deno.dev/',
       stack: [
@@ -35,7 +36,14 @@ export class ProjetListeComponent {
         'Angular Material',
         'PrimeNG',
       ],
-      img: 'assets/img/planning-poking.png',
+      img: 'assets/img/planning-poking.jpg',
+    },
+    {
+      name: 'POC Highchart Angular',
+      descripition: `Ce POC a été développé afin de tester la faisabilité de déplacer plusieurs points sur un graphe (soit en les sélectionnant, à un index en particulier ou bien dans une zone dite de travail)`,
+      link: 'https://github.com/silvanic/Highchart_Angular_Playground',
+      stack: ['Angular', 'Highchart', 'Typescript'],
+      img: 'assets/img/highchart_angular.png',
     },
   ];
 }

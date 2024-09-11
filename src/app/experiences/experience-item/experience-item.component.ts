@@ -4,6 +4,7 @@ import { AccordionModule } from 'primeng/accordion';
 import { CardModule } from 'primeng/card';
 import { ChipModule } from 'primeng/chip';
 import { PanelModule } from 'primeng/panel';
+import { Mission } from '../experience/experience.component';
 
 @Component({
   selector: 'app-experience-item',
@@ -13,11 +14,6 @@ import { PanelModule } from 'primeng/panel';
   styleUrl: './experience-item.component.scss',
 })
 export class ExperienceItemComponent {
-  @Input() header: string = '';
-  @Input() poste: string = '';
-  @Input() organisation: string = '';
-  @Input() mission: string = '';
-  @Input() activites: string[] = [];
-  @Input() resultat: string = '';
-  @Input() environnement: string[] = [];
+  @Input()
+  mission!: Mission;
 }

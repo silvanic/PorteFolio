@@ -2,10 +2,11 @@
   class="flex flex-column md:flex-row w-full gap-3 p-3 border-round border-1 surface-border mb-3 ng-star-inserted"
 >
   <div *ngIf="projet.img" class="relative mr-2">
-    <img
-      alt="Image"
-      class="border-round w-full h-full md:w-14rem md:h-14rem"
+    <p-image
       [src]="projet.img"
+      alt="Image"
+      imageClass="border-round w-full h-full md:w-14rem md:h-14rem"
+      [preview]="true"
     />
   </div>
   <div class="flex flex-column w-full gap-3">
@@ -14,9 +15,6 @@
         {{ projet.name }}
       </p>
     </div>
-    <p class="font-normal text-lg text-600 mt-0 mb-0">
-      {{ projet.descripition }}
-    </p>
     <p class="font-normal text-lg text-600 mt-0 mb-0">
       {{ projet.descripition }}
     </p>
