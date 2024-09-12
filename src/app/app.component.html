@@ -1,16 +1,19 @@
 <div
   class="grid grid-nogutter surface-section text-800 pt-8 pb-3"
   style="background-color: #111827"
+  role="banner"
 >
   <div
-    class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center"
+    class="col-12 md:col-6 p-4 sm:p-6 text-center md:text-left flex align-items-center"
   >
     <section>
-      <span class="block text-6xl font-bold mb-1">Alexandre DEZIER</span>
-      <div class="text-6xl text-primary font-bold mb-3">
+      <h1 class="block text-6xl font-bold mb-1">Alexandre DEZIER</h1>
+      <h2 class="text-6xl text-primary font-bold mb-3">
         Développeur FullStack
-      </div>
-      <p class="mt-0 mb-4 text-700 text-lg line-height-3 text-justify">
+      </h2>
+      <p
+        class="flex white-space-normal mt-0 mb-4 text-700 text-lg line-height-3 text-justify"
+      >
         Développeur FullStack passionné depuis 2017, je me distingue par une
         capacité d'adaptation, tant sur le plan technique (Front : Angular, Vue,
         React ; Back : NodeJS, SpringBoot) que sur le plan métier et
@@ -27,6 +30,7 @@
           target="_blank"
           rel="noopener noreferrer"
           class="p-button p-button-rounded p-2"
+          aria-label="Lien vers GitHub d'Alexandre DEZIER"
         >
           <i class="pi pi-github" style="font-size: 1.25rem"></i>
         </a>
@@ -35,6 +39,7 @@
           target="_blank"
           rel="noopener noreferrer"
           class="p-button p-button-rounded p-2 ml-2"
+          aria-label="Lien vers Linkedin d'Alexandre DEZIER"
         >
           <i class="pi pi-linkedin" style="font-size: 1.25rem"></i>
         </a>
@@ -50,16 +55,21 @@
     />
   </div>
 </div>
-<p-tabView class="pt-3">
-  <p-tabPanel header="Experience et études">
-    <app-experience></app-experience>
-  </p-tabPanel>
-  <p-tabPanel header="Projets annexes">
-    <app-projet-liste></app-projet-liste>
-  </p-tabPanel>
-</p-tabView>
+
+<main>
+  <p-tabView class="pt-3" [scrollable]="true">
+    <p-tabPanel header="Experience et études">
+      <app-experience></app-experience>
+    </p-tabPanel>
+    <p-tabPanel header="Projets annexes">
+      <app-projet-liste></app-projet-liste>
+    </p-tabPanel>
+  </p-tabView>
+</main>
+
 <p-footer
   class="flex justify-content-between align-items-center mx-4 sm:mx-8 my-4"
+  role="contentinfo"
 >
   <span>©2024 Alexandre DEZIER</span>
 
@@ -70,6 +80,7 @@
         target="_blank"
         rel="noopener noreferrer"
         class="p-button p-button-rounded p-2"
+        aria-label="Lien vers GitHub d'Alexandre DEZIER"
       >
         <i class="pi pi-github" style="font-size: 1.25rem"></i>
       </a>
@@ -78,6 +89,7 @@
         target="_blank"
         rel="noopener noreferrer"
         class="p-button p-button-rounded p-2 ml-2"
+        aria-label="Lien vers Linkedin d'Alexandre DEZIER"
       >
         <i class="pi pi-linkedin" style="font-size: 1.25rem"></i>
       </a>

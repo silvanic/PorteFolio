@@ -1,4 +1,9 @@
-<p-panel [toggleable]="true" toggler="header" [collapsed]="true">
+<p-panel
+  [toggleable]="true"
+  toggler="header"
+  [collapsed]="true"
+  [header]="mission.header + ' - ' + mission.poste"
+>
   <ng-template pTemplate="header">
     <div class="flex flex-column">
       <span>

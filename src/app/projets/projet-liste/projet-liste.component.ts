@@ -45,5 +45,16 @@ export class ProjetListeComponent {
       stack: ['Angular', 'Highchart', 'Typescript'],
       img: 'assets/img/highchart_angular.png',
     },
+    {
+      name: 'CodeSandbox',
+      descripition: `Ce site n'est pas un véritable projet, mais plutôt un espace où 
+      je laisse libre cours à mon imagination. Chaque idée qui me traverse l'esprit, 
+      ou chaque besoin d'outil spécifique que je rencontre, finit par se retrouver ici.
+      Qu'il s'agisse d'une expérimentation ou d'un projet plus abouti, tout est possible.
+      Selon l'ampleur de l'idée, elle peut également être hébergée sur mon GitHub.`,
+      link: 'https://codesandbox.io/u/silvanic',
+      stack: ['Angular', 'Vue', 'Express', 'Node', 'WebSocket', 'JS/TS'],
+      img: 'https://codesandbox.io/new/images/og.jpg',
+    },
   ];
 }
