@@ -6,6 +6,7 @@ import { TabViewModule } from 'primeng/tabview';
 import { CardModule } from 'primeng/card';
 import { ProjetListeComponent } from './projets/projet-liste/projet-liste.component';
 import { BrowserModule, Meta } from '@angular/platform-browser';
+import { CompetencesListeComponent } from './competences/competences-liste/competences-liste.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -16,6 +17,7 @@ import { BrowserModule, Meta } from '@angular/platform-browser';
     TabViewModule,
     CardModule,
     ProjetListeComponent,
+    CompetencesListeComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

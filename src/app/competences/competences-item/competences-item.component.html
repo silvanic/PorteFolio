@@ -1,0 +1,23 @@
+<div class="text-center">
+  <div
+    class="border-1 border-200 surface-50 flex align-items-center justify-content-center border-round mb-3 mx-auto"
+    style="width: 90px; height: 90px"
+  >
+    <a
+      [href]="competence().libUrl"
+      [ariaLabel]="'Site de ' + competence().name"
+      target="_blank"
+      rel="noopener noreferrer"
+      [class]="'p-2' + (competence().iconUrl ? ' w-full h-full' : '')"
+    >
+      <img
+        [src]="competence().iconUrl"
+        [alt]="competence().name"
+        class="w-full h-full align-items-center"
+      />
+    </a>
+  </div>
+  <div class="text-xl font-medium">
+    {{ competence().name }}
+  </div>
+</div>
