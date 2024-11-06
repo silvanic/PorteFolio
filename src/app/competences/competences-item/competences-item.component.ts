@@ -4,7 +4,7 @@ export interface Competence {
   name: string;
   iconUrl?: string;
   libUrl: string;
-  taches: string[];
+  taches?: string[];
 }
 
 @Component({

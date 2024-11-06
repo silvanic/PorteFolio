@@ -46,6 +46,13 @@ export class ProjetListeComponent {
       img: 'assets/img/highchart_angular.png',
     },
     {
+      name: 'POC Simple Chat avec le protocole MQTT',
+      descripition: `Ce POC a été développé dans le but d'explorer et d'apprendre l'implémentation du protocole MQTT pour la communication en temps réel. L'objectif était de mettre en place un système de messagerie rapide et léger, adapté aux applications nécessitant des mises à jour en direct, comme la domotique, l'IoT ou la gestion de capteurs.`,
+      link: 'https://mqtt-front.onrender.com/',
+      stack: ['Angular', 'Node', 'Aedes'],
+      img: 'assets/img/simple_mqtt.png',
+    },
+    {
       name: 'CodeSandbox',
       descripition: `Ce site n'est pas un véritable projet, mais plutôt un espace où 
       je laisse libre cours à mon imagination. Chaque idée qui me traverse l'esprit, 
