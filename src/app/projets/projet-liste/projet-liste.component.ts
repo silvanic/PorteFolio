@@ -21,6 +21,12 @@ export interface IProjet {
 export class ProjetListeComponent {
   projets: IProjet[] = [
     {
+      name: 'Showdown Score (PWA)',
+      descripition: `Showdown Score est une application web conçue pour les joueurs de Showdown. Elle permet de créer et de lancer une partie, d'en suivre l'évolution et de consulter l'historique. Développée pour visualiser la progression des joueurs au fil de l'année, l'application est une Progressive Web App (PWA) installable sur n'importe quel appareil, offrant une expérience fluide et accessible à tout moment. Ce projet m'a aussi permis de travailler et d'approfondir les normes d'accessibilité.`,
+      link: 'https://showdown-match.netlify.app/',
+      stack: ['Vue 3', 'PrimeVue', 'Netlify'],
+    },
+    {
       name: 'Planning Poking',
       descripition: `Un simple Planning Poker où l'on peut personnaliser la valeur 
       des cartes, partager un lien pour rejoindre la salle, mettre à jour la 
@@ -61,7 +67,6 @@ export class ProjetListeComponent {
       Selon l'ampleur de l'idée, elle peut également être hébergée sur mon GitHub.`,
       link: 'https://codesandbox.io/u/silvanic',
       stack: ['Angular', 'Vue', 'Express', 'Node', 'WebSocket', 'JS/TS'],
-      img: 'https://codesandbox.io/new/images/og.jpg',
     },
   ];
 }

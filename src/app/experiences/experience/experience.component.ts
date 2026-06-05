@@ -61,10 +61,41 @@ export class ExperienceComponent {
       title: 'Open (mars 2018 à ce jour)',
       missions: [
         {
+          header: 'De février 2025 à fin mai 2026, pour la DIRCE (Direction Interdépartementale des Routes Centre-Est)',
+          poste: 'Développeur Front Angular',
+          organisation: "Équipe d'un peu moins d'une vingtaine de personnes, dont 10 développeurs. En mode agile, avec des sprints de 4 semaines, accompagnés de Sprint Planning Meetings, de rétrospectives et de cadrage.",
+          mission: 'TMA Sagacité : maintenance corrective, évolutive et support de l\'application Sagacité sur la partie front. Sagacité est un Système d’Aide à la Gestion du Trafic utilisé dans plusieurs DIR en France (Directions Interdépartementales des Routes).',
+          activites: [
+            'Développement de fonctionnalités front-end.',
+            'Identification et résolution d\'anomalies afin d\'assurer le bon fonctionnement de l\'application.',
+            'Accompagnement des développeurs dans l\'adoption de bonnes pratiques de développement, pour une meilleure efficacité et une meilleure maintenabilité du code.',
+            'Revue du code front-end pour garantir la cohérence technique et la qualité des développements.',
+            'Fiabilisation du reste à faire (RAF) pour améliorer les futures itérations du projet.',
+            'Amélioration de la qualité du développement et anticipation des impacts des changements.',
+            'Documentation de l\'utilisation de l\'IA pour faciliter la compréhension et l\'adoption de cette technologie.',
+          ],
+          resultat: 'Évolution et stabilisation de l\'application Sagacité, en assurant une meilleure qualité du développement et une anticipation des impacts des changements. Amélioration de la productivité suite à la mise en place de processus assistés par l’IA.',
+          environnement: [
+            'Jira',
+            'Git',
+            'Confluence',
+            'Angular 12',
+            'Angular Material',
+            'OpenLayers',
+            'Quill',
+            'CKEditor',
+            'Java 11',
+            'Spring Boot',
+            'PostgreSQL',
+            'WSL',
+            'SSH'
+          ]
+        },
+        {
           header: "De mars 2024 à juillet 2024, pour l'ANF",
           poste: 'Développeur Front',
           organisation:
-            "Equipe d'une dizaine de personnes dont 5 développeurs. En mode agile, avec des sprints de 3 semaines accompagné de Sprint Planning Meeting, Rétro et cadrage.",
+            "Équipe d'une dizaine de personnes, dont 5 développeurs. En mode agile, avec des sprints de 3 semaines, accompagnés de Sprint Planning Meetings, de rétrospectives et de cadrage.",
           mission:
             "Développement d'une nouvelle application pour la gestion de sites administratifs en utilisant des outils géographiques pour l'Administration de la nature et des forêts du Luxembourg, avec un calendrier strict imposé par la nécessité d'un MVP défini par le client.",
           activites: [
