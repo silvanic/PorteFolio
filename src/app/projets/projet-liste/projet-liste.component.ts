@@ -5,7 +5,7 @@ import { DividerModule } from 'primeng/divider';
 
 export interface IProjet {
   name: string;
-  descripition: string;
+  description: string;
   link: string;
   stack: string[];
   img?: string;
@@ -22,13 +22,13 @@ export class ProjetListeComponent {
   projets: IProjet[] = [
     {
       name: 'Showdown Score (PWA)',
-      descripition: `Showdown Score est une application web conçue pour les joueurs de Showdown. Elle permet de créer et de lancer une partie, d'en suivre l'évolution et de consulter l'historique. Développée pour visualiser la progression des joueurs au fil de l'année, l'application est une Progressive Web App (PWA) installable sur n'importe quel appareil, offrant une expérience fluide et accessible à tout moment. Ce projet m'a aussi permis de travailler et d'approfondir les normes d'accessibilité.`,
+      description: `Showdown Score est une application web conçue pour les joueurs de Showdown. Elle permet de créer et de lancer une partie, d'en suivre l'évolution et de consulter l'historique. Développée pour visualiser la progression des joueurs au fil de l'année, l'application est une Progressive Web App (PWA) installable sur n'importe quel appareil, offrant une expérience fluide et accessible à tout moment. Ce projet m'a aussi permis de travailler et d'approfondir les normes d'accessibilité.`,
       link: 'https://showdown-match.netlify.app/',
       stack: ['Vue 3', 'PrimeVue', 'Netlify'],
     },
     {
       name: 'Planning Poking',
-      descripition: `Un simple Planning Poker où l'on peut personnaliser la valeur 
+      description: `Un simple Planning Poker où l'on peut personnaliser la valeur 
       des cartes, partager un lien pour rejoindre la salle, mettre à jour la 
       configuration de la salle en temps réel. Largement inspiré d'autres Planning Poker mais 
       simplifié. Une seconde version est en cours de développement en remplacant Angular Material par PrimeNG afin d'améliorer
@@ -46,21 +46,21 @@ export class ProjetListeComponent {
     },
     {
       name: 'POC Highchart Angular',
-      descripition: `Ce POC a été développé pour évaluer la faisabilité de déplacer plusieurs points sur un graphe, soit en les sélectionnant individuellement, à un index spécifique, ou au sein d'une zone de travail définie.`,
+      description: `Ce POC a été développé pour évaluer la faisabilité de déplacer plusieurs points sur un graphe, soit en les sélectionnant individuellement, à un index spécifique, ou au sein d'une zone de travail définie.`,
       link: 'https://github.com/silvanic/Highchart_Angular_Playground',
       stack: ['Angular', 'Highchart', 'Typescript'],
       img: 'assets/img/highchart_angular.png',
     },
     {
       name: 'POC Simple Chat avec le protocole MQTT',
-      descripition: `Ce POC a été développé dans le but d'explorer et d'apprendre l'implémentation du protocole MQTT pour la communication en temps réel. L'objectif était de mettre en place un système de messagerie rapide et léger, adapté aux applications nécessitant des mises à jour en direct, comme la domotique, l'IoT ou la gestion de capteurs.`,
+      description: `Ce POC a été développé dans le but d'explorer et d'apprendre l'implémentation du protocole MQTT pour la communication en temps réel. L'objectif était de mettre en place un système de messagerie rapide et léger, adapté aux applications nécessitant des mises à jour en direct, comme la domotique, l'IoT ou la gestion de capteurs.`,
       link: 'https://mqtt-front.onrender.com/',
       stack: ['Angular', 'Node', 'Aedes'],
       img: 'assets/img/simple_mqtt.png',
     },
     {
       name: 'CodeSandbox',
-      descripition: `Ce site n'est pas un véritable projet, mais plutôt un espace où 
+      description: `Ce site n'est pas un véritable projet, mais plutôt un espace où 
       je laisse libre cours à mon imagination. Chaque idée qui me traverse l'esprit, 
       ou chaque besoin d'outil spécifique que je rencontre, finit par se retrouver ici.
       Qu'il s'agisse d'une expérimentation ou d'un projet plus abouti, tout est possible.

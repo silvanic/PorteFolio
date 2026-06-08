@@ -18,6 +18,7 @@ export interface Experience {
 export interface Mission {
   header?: string;
   poste: string;
+  application?: string;
   organisation: string;
   mission: string;
   activites: string[];
@@ -64,6 +65,7 @@ export class ExperienceComponent {
           header: 'De février 2025 à fin mai 2026, pour la DIRCE (Direction Interdépartementale des Routes Centre-Est)',
           poste: 'Développeur Front Angular',
           organisation: "Équipe d'un peu moins d'une vingtaine de personnes, dont 10 développeurs. En mode agile, avec des sprints de 4 semaines, accompagnés de Sprint Planning Meetings, de rétrospectives et de cadrage.",
+          application: "Le projet SAGACITÉ est un Système d'Aide à la Gestion de Trafic (SAGT) déployé au sein des Directions Interdépartementales des Routes (DIR) pour le compte du Ministère de la Transition Écologique et Solidaire. Il offre aux opérateurs des Postes de Contrôle une interface centralisée permettant la surveillance du trafic en temps réel, la gestion des événements routiers et le pilotage des équipements dynamiques (panneaux à messages variables, capteurs…) afin d'optimiser l'exploitation et la sécurité du réseau routier national.",
           mission: 'TMA Sagacité : maintenance corrective, évolutive et support de l\'application Sagacité sur la partie front. Sagacité est un Système d’Aide à la Gestion du Trafic utilisé dans plusieurs DIR en France (Directions Interdépartementales des Routes).',
           activites: [
             'Développement de fonctionnalités front-end.',
