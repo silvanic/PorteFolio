@@ -1,40 +1,56 @@
-<article
-  class="flex flex-column md:flex-row w-full gap-3 p-3 border-round border-1 surface-border mb-3 ng-star-inserted"
->
-  <div *ngIf="projet.img" class="relative mr-2">
+<article class="projet-card">
+  <!-- Image Section -->
+  <div *ngIf="projet.img" class="projet-image">
     <p-image
       [src]="projet.img"
-      alt="Image"
-      [title]="'Site web ' + projet.name"
-      imageClass="border-round w-full h-full md:w-14rem md:h-14rem"
+      [alt]="'Image - ' + projet.name"
+      [title]="projet.name"
+      imageClass="projet-img"
       [preview]="true"
     />
+    <div class="image-overlay"></div>
   </div>
-  <div class="flex flex-column w-full gap-3">
-    <div class="flex w-full justify-content-between align-items-center">
-      <p class="font-semibold text-lg mt-0 mb-0 mr-3">
-        {{ projet.name }}
-      </p>
+
+  <!-- Content Section -->
+  <div class="projet-content">
+    <!-- Header with Title -->
+    <div class="content-header">
+      <h3 class="projet-title">{{ projet.name }}</h3>
+      <a
+        *ngIf="projet.link"
+        [href]="projet.link"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="projet-link-btn"
+        [attr.aria-label]="'Ouvrir ' + projet.name"
+      >
+        <i class="pi pi-external-link"></i>
+      </a>
     </div>
-    <p class="font-normal text-lg text-600 mt-0 mb-0">
-      {{ projet.description }}
-    </p>
-    <p>
+
+    <!-- Description -->
+    <p class="projet-description">{{ projet.description }}</p>
+
+    <!-- Tech Stack -->
+    <div class="tech-stack">
+      <p-chip
+        *ngFor="let tech of projet.stack"
+        [label]="tech"
+        styleClass="tech-chip"
+      />
+    </div>
+
+    <!-- Link Display -->
+    <div *ngIf="projet.link" class="projet-link-display">
+      <i class="pi pi-link"></i>
       <a
         [href]="projet.link"
         target="_blank"
         rel="noopener noreferrer"
-        class="p-2"
+        class="link-text"
       >
-        {{ projet.link }}
+        {{ projet.link | slice:8:50 }}{{ (projet.link || '').length > 50 ? '...' : '' }}
       </a>
-    </p>
-    <div class="flex flex-row flex-wrap mt-auto">
-      <p-chip
-        *ngFor="let item of projet.stack"
-        [label]="item"
-        class="mr-2 mb-2"
-      ></p-chip>
     </div>
   </div>
 </article>

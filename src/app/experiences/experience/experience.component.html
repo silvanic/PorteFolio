@@ -1,41 +1,39 @@
-<p-card>
-  <ng-template pTemplate="header">
-    <div
-      class="col-12 md:col-6 pl-0 sm:pl-3 uppercase text-center text-center sm:text-left flex justify-content-center sm:justify-content-start"
-    >
-      <h3 class="text-3xl">Expérience</h3>
-    </div>
-  </ng-template>
+<div class="experience-container">
+  <!-- Experiences Section -->
+  <section class="experience-section">
+    <h2 class="section-title">
+      <i class="pi pi-briefcase"></i>
+      {{ 'experiences.title' | translate }}
+    </h2>
 
-  @for (experience of experiences; track $index){
-  <p-card [header]="experience.title" styleClass="ml-1 sm:ml-4">
-    @for(mission of experience.missions; track $index){
-    <app-experience-item [mission]="mission"> </app-experience-item>
-    }
-  </p-card>
-  }
-
-  <p-divider />
-
-  <p-card class="ml-1 sm:ml-4">
-    <ng-template pTemplate="header">
-      <div
-        class="col-12 md:col-6 pl-0 sm:pl-3 uppercase text-center text-center sm:text-left flex justify-content-center sm:justify-content-start"
-      >
-        <h3 class="text-3xl">Formations & certifications</h3>
+    <div class="missions-list">
+      @for (experience of experiences; track $index) {
+      <div class="company-group">
+        <h3 class="company-name">{{ experience.title }}</h3>
+        <div class="missions-group">
+          @for (mission of experience.missions; track $index) {
+          <app-experience-item [mission]="mission"></app-experience-item>
+          }
+        </div>
       </div>
-    </ng-template>
-    <p-timeline [value]="formationsCertifications">
+      }
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section class="experience-section certifications-section">
+    <h2 class="section-title">
+      <i class="pi pi-certificate"></i>
+      {{ 'experiences.certifications' | translate }}
+    </h2>
+
+    <p-timeline [value]="formationsCertifications" align="left" styleClass="formations-timeline">
       <ng-template pTemplate="content" let-event>
-        <div class="flex flex-column mb-5">
-          <span class="font-bold text-xl flex-wrap">
-            {{ event.title }}
-          </span>
-          <span class="text-lg">
-            {{ event.date }}
-          </span>
+        <div class="formation-item">
+          <span class="formation-title">{{ event.title }}</span>
+          <span class="formation-date">{{ event.date }}</span>
         </div>
       </ng-template>
     </p-timeline>
-  </p-card>
-</p-card>
+  </section>
+</div>

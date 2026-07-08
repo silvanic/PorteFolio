@@ -1,14 +1,302 @@
 /* You can add global styles to this file, and also import other style files */
-@import url("../node_modules/primeflex/primeflex.scss");
-@import url("../node_modules/primeflex/themes/primeone-dark.scss");
-@import url("../node_modules/primeng/resources/primeng.css");
-@import url("../node_modules/primeng/resources/themes/lara-dark-teal/theme.css");
+@import url("../node_modules/primeflex/primeflex.css");
+@import url("../node_modules/primeflex/themes/primeone-dark.css");
 @import url("../node_modules/primeicons/primeicons.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* ═══════════════════════════════════════════════
+   Design Tokens — Leveraging PrimeNG Aura Blue
+═══════════════════════════════════════════════ */
+:root {
+  /* Background layers */
+  --app-bg: var(--surface-ground, #0f172a);
+  --app-surface: var(--surface-section, #1e293b);
+  --app-card-bg: var(--surface-card, #111827);
+  --app-surface-alt: var(--surface-card, #0f172a);
+  
+  /* Text */
+  --app-text: var(--text-color, #e2e8f0);
+  --app-text-muted: var(--text-color-secondary, #cbd5e1);
+  
+  /* Primary blue colors (from PrimeNG) */
+  --app-indigo: var(--primary-500, #3b82f6);
+  --app-indigo-light: var(--primary-400, #60a5fa);
+  --app-indigo-glow: var(--primary-500-alpha, rgba(59, 130, 246, 0.15));
+  
+  /* Borders */
+  --app-border: var(--surface-border, rgba(59, 130, 246, 0.22));
+  --app-border-subtle: rgba(255, 255, 255, 0.06);
+}
+
+/* ═══════════════════════════════════════════════
+   Base
+═══════════════════════════════════════════════ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
-  background-color: #111827;
+  background-color: var(--app-bg);
+  color: var(--app-text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════════
+   PrimeFlex surface overrides for dark mode
+═══════════════════════════════════════════════ */
+.surface-section   { background-color: var(--app-bg) !important; }
+.surface-card      { background-color: var(--app-card-bg) !important; }
+.surface-overlay   { background-color: var(--app-surface) !important; }
+.surface-ground    { background-color: var(--app-bg) !important; }
+.text-700          { color: var(--app-text-muted) !important; }
+.text-800          { color: var(--app-text) !important; }
+.text-900          { color: var(--app-text) !important; }
+
+/* ═══════════════════════════════════════════════
+   PrimeNG card override
+═══════════════════════════════════════════════ */
+.p-card {
+  background: var(--app-card-bg) !important;
+  border: 1px solid var(--app-border-subtle) !important;
+  border-radius: 12px !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    border-color: var(--app-border) !important;
+    box-shadow: 0 0 0 1px var(--app-indigo-glow), 0 8px 32px rgba(0,0,0,0.3) !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   PrimeNG tabs override
+═══════════════════════════════════════════════ */
+.p-tabs {
+  .p-tablist {
+    background: var(--app-surface) !important;
+    border-bottom: 1px solid var(--app-border-subtle) !important;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .p-tab {
+    color: var(--app-text-muted) !important;
+    font-weight: 500;
+    padding: 0.875rem 1.5rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--app-indigo-light) !important;
+    }
+
+    &[data-p-active="true"] {
+      color: var(--app-indigo-light) !important;
+      border-bottom-color: var(--app-indigo) !important;
+    }
+  }
+
+  .p-tabpanels {
+    background: transparent !important;
+    padding: 1.5rem 0 !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   Chips
+═══════════════════════════════════════════════ */
+.p-chip {
+  background: var(--app-indigo-glow) !important;
+  border: 1px solid var(--app-border) !important;
+  color: var(--app-indigo-light) !important;
+  font-size: 0.75rem !important;
+  font-weight: 500;
+  border-radius: 6px !important;
+}
+
+/* ═══════════════════════════════════════════════
+   Accordion
+═══════════════════════════════════════════════ */
+.p-accordion {
+  .p-accordion-header {
+    background: var(--app-surface-alt) !important;
+    border-radius: 8px !important;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: var(--app-surface) !important;
+    }
+  }
+
+  .p-accordion-content {
+    background: var(--app-card-bg) !important;
+    border-color: var(--app-border-subtle) !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   Divider
+═══════════════════════════════════════════════ */
+.p-divider-horizontal::before {
+  border-top-color: var(--app-border-subtle) !important;
+}
+
+/* ═══════════════════════════════════════════════
+   Scrollbar
+═══════════════════════════════════════════════ */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--app-bg); }
+::-webkit-scrollbar-thumb {
+  background: var(--app-border);
+  border-radius: 3px;
+  &:hover { background: var(--app-indigo); }
+}
+
+/* ═══════════════════════════════════════════════
+   Boutons icônes arrondi (header/footer)
+═══════════════════════════════════════════════ */
+a.p-button.p-button-rounded {
+  background: var(--app-indigo-glow) !important;
+  border: 1px solid var(--app-border) !important;
+  color: var(--app-indigo-light) !important;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+
+  &:hover {
+    background: var(--app-indigo) !important;
+    border-color: var(--app-indigo) !important;
+    color: #fff !important;
+    transform: translateY(-1px);
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   bg-bluey (image header clip)
+═══════════════════════════════════════════════ */
+.bg-bluey {
+  background: linear-gradient(135deg, var(--app-surface) 0%, #1e1b4b 100%);
+}
+
+/* ═══════════════════════════════════════════════
+   CHIPS (Compétences)
+═══════════════════════════════════════════════ */
+.p-chip {
+  background: var(--app-indigo-glow) !important;
+  border: 1px solid var(--app-border) !important;
+  border-radius: 8px !important;
+
+  .p-chip-text {
+    color: var(--app-indigo-light) !important;
+    font-weight: 500;
+  }
+
+  &:hover {
+    border-color: var(--app-indigo) !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   Timeline
+═══════════════════════════════════════════════ */
+.p-timeline-event-marker {
+  border-color: var(--app-indigo) !important;
+  background: var(--app-indigo-glow) !important;
+}
+
+.p-timeline-event-connector {
+  background: var(--app-border) !important;
 }
 
 .bg-bluey {
   background-color: #111827;
+}
+
+/* Header KPI badges (global to avoid component style budget overflow) */
+.app-header .header-kpis {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.app-header .kpi-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid var(--app-border-subtle);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--primary-500, #3b82f6) 18%, transparent) 0%,
+    color-mix(in srgb, var(--surface-section, #1e293b) 92%, transparent) 100%
+  );
+  min-width: 152px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-header .kpi-badge:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--primary-400, #60a5fa) 60%, var(--app-border));
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--primary-500, #3b82f6) 20%, transparent);
+}
+
+.app-header .kpi-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--primary-500, #3b82f6) 16%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary-500, #3b82f6) 36%, transparent);
+  color: var(--primary-400, #60a5fa);
+}
+
+.app-header .kpi-icon i {
+  font-size: 0.9rem;
+}
+
+.app-header .kpi-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.app-header .kpi-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--app-indigo-light);
+  line-height: 1.1;
+}
+
+.app-header .kpi-label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--app-text-muted);
+  line-height: 1.25;
+}
+
+.app-header .kpi-projects .kpi-icon {
+  color: var(--green-400, #4ade80);
+  border-color: color-mix(in srgb, var(--green-400, #4ade80) 40%, transparent);
+  background: color-mix(in srgb, var(--green-400, #4ade80) 16%, transparent);
+}
+
+.app-header .kpi-experience .kpi-icon {
+  color: var(--amber-400, #fbbf24);
+  border-color: color-mix(in srgb, var(--amber-400, #fbbf24) 40%, transparent);
+  background: color-mix(in srgb, var(--amber-400, #fbbf24) 16%, transparent);
+}
+
+.app-header .kpi-stack .kpi-icon {
+  color: var(--cyan-400, #22d3ee);
+  border-color: color-mix(in srgb, var(--cyan-400, #22d3ee) 40%, transparent);
+  background: color-mix(in srgb, var(--cyan-400, #22d3ee) 16%, transparent);
+}
+
+@media (max-width: 768px) {
+  .app-header .header-kpis {
+    justify-content: center;
+  }
 }

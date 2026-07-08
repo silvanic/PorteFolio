@@ -11,7 +11,7 @@ import { Mission } from '../experience/experience.component';
   standalone: true,
   imports: [AccordionModule, CardModule, PanelModule, ChipModule, CommonModule],
   templateUrl: './experience-item.component.html',
-  styleUrl: './experience-item.component.scss',
+  styleUrls: ['./experience-item.component.scss'],
 })
 export class ExperienceItemComponent {
   @Input()

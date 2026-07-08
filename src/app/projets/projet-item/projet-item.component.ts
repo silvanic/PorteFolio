@@ -11,7 +11,7 @@ import { ImageModule } from 'primeng/image';
   standalone: true,
   imports: [CommonModule, PanelModule, ChipModule, ImageModule],
   templateUrl: './projet-item.component.html',
-  styleUrl: './projet-item.component.scss',
+  styleUrls: ['./projet-item.component.scss'],
 })
 export class ProjetItemComponent {
   @Input()

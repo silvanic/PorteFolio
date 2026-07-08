@@ -1,89 +1,69 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { ExperienceComponent } from './experiences/experience/experience.component';
 import { ButtonModule } from 'primeng/button';
-import { TabViewModule } from 'primeng/tabview';
-import { CardModule } from 'primeng/card';
+import { TabsModule } from 'primeng/tabs';
 import { ProjetListeComponent } from './projets/projet-liste/projet-liste.component';
-import { BrowserModule, Meta } from '@angular/platform-browser';
+import { Meta } from '@angular/platform-browser';
+import { Title } from '@angular/platform-browser';
 import { CompetencesListeComponent } from './competences/competences-liste/competences-liste.component';
+import { I18nService } from './services/i18n.service';
+import { TranslatePipe } from './pipes/translate.pipe';
+
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet,
     ExperienceComponent,
     ButtonModule,
-    TabViewModule,
-    CardModule,
+    TabsModule,
     ProjetListeComponent,
     CompetencesListeComponent,
+    TranslatePipe,
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'portefolio';
 
-  constructor(private meta: Meta) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private i18nService: I18nService
+  ) {}
 
   ngOnInit(): void {
-    // base
+    const name = this.i18nService.get('app.name');
+    const role = this.i18nService.get('app.title');
+    const title = `Portfolio d'${name}`;
+    const description = `Portfolio du développeur Fullstack ${name}`;
+    const image = 'assets/img/shared.jpg';
+    const url = window.location.href;
+
+    this.titleService.setTitle(title);
+
+    // SEO standard
+    this.meta.updateTag({ name: 'description', content: description });
+    this.meta.updateTag({ name: 'author', content: name });
+    this.meta.updateTag({ name: 'copyright', content: name });
     this.meta.updateTag({
-      name: 'title',
-      content: `Portefolio d'Alexandre DEZIER`,
-    });
-    this.meta.addTag({
-      name: 'description',
-      content: 'Portefolio du développeur Fullstack Alexandre DEZIER',
-    });
-    this.meta.addTag({
-      name: 'author',
-      content: 'Alexandre DEZIER',
-    });
-    this.meta.addTag({
-      name: 'copyright',
-      content: 'Alexandre DEZIER',
-    });
-    this.meta.addTag({
       name: 'keywords',
-      content:
-        'Portefolio, développeur, fullstack, front, informatique, Alexandre DEZIER',
+      content: `Portfolio, développeur, fullstack, front, informatique, ${name}`,
     });
-    // og
-    this.meta.addTag({
-      property: 'og:title',
-      content: 'Alexandre DEZIER',
-    });
-    this.meta.addTag({
-      property: 'description',
-      content: 'Portefolio du développeur Fullstack Alexandre DEZIER',
-    });
-    this.meta.addTag({
-      property: 'og:type',
-      content: 'portefolio',
-    });
-    this.meta.addTag({
-      property: 'og:image',
-      content: 'assets/img/shared.jpg',
-    });
-    this.meta.addTag({
-      property: 'og:url',
-      content: document.URL,
-    });
-    // twitter
-    this.meta.addTag({
-      name: 'twitter:card',
-      content: 'summary_large_image',
-    });
-    this.meta.addTag({
-      property: 'twitter:image',
-      content: 'assets/img/shared.jpg',
-    });
-    this.meta.addTag({
-      name: 'twitter:image-alt',
-      content: 'Alexandre DEZIER, Développeur Fullstack',
-    });
-    //
+
+    // Open Graph
+    this.meta.updateTag({ property: 'og:title', content: title });
+    this.meta.updateTag({ property: 'og:description', content: description });
+    this.meta.updateTag({ property: 'og:type', content: 'website' });
+    this.meta.updateTag({ property: 'og:image', content: image });
+    this.meta.updateTag({ property: 'og:url', content: url });
+
+    // Twitter Cards
+    this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+    this.meta.updateTag({ name: 'twitter:title', content: title });
+    this.meta.updateTag({ name: 'twitter:description', content: description });
+    this.meta.updateTag({ name: 'twitter:image', content: image });
+    this.meta.updateTag({ name: 'twitter:image-alt', content: `${name}, ${role}` });
   }
 }
+

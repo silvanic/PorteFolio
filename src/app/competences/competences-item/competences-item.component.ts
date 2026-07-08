@@ -12,7 +12,7 @@ export interface Competence {
   standalone: true,
   imports: [],
   templateUrl: './competences-item.component.html',
-  styleUrl: './competences-item.component.scss',
+  styleUrls: ['./competences-item.component.scss'],
 })
 export class CompetencesItemComponent {
   competence = input.required<Competence>();

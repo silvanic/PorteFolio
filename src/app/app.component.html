@@ -1,101 +1,119 @@
-<div
-  class="grid grid-nogutter surface-section text-800 pt-8 pb-3"
-  style="background-color: #111827"
-  role="banner"
->
-  <div
-    class="col-12 md:col-6 p-4 sm:p-6 text-center md:text-left flex align-items-center"
-  >
-    <section>
-      <h1 class="block text-6xl font-bold mb-1">Alexandre DEZIER</h1>
-      <h2 class="text-6xl text-primary font-bold mb-3">
-        Développeur FullStack
-      </h2>
-      <p
-        class="flex white-space-normal mt-0 mb-4 text-700 text-lg line-height-3 text-justify"
-      >
-        Développeur FullStack passionné depuis 2017, je me distingue par une
-        capacité d'adaptation, tant sur le plan technique (Front : Angular, Vue,
-        React ; Back : NodeJS, SpringBoot) que sur le plan métier et
-        méthodologique.
+<header class="app-header" role="banner">
+  <div class="header-content">
+    <div class="header-text">
+      <div class="header-badge">Portfolio</div>
+      <h1 class="header-name">{{ 'app.name' | translate }}</h1>
+      <h2 class="header-title">{{ 'app.title' | translate }}</h2>
+      <p class="header-description">
+        {{ 'app.description' | translate }}
       </p>
-      <p class="mt-0 mb-4 text-700 text-lg line-height-3 text-justify">
-        Ma motivation ? Comprendre et maîtriser chaque étape du parcours des
-        données, du serveur au client.
+      <p class="header-motivation">
+        {{ 'app.motivation' | translate }}
       </p>
-      <span class="flex align-items-center">
-        <span class="mr-2"> Mes réseaux : </span>
-        <a
-          href="https://github.com/silvanic"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="p-button p-button-rounded p-2"
-          aria-label="Lien vers GitHub d'Alexandre DEZIER"
-        >
-          <i class="pi pi-github" style="font-size: 1.25rem"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/alexandre-dezier-9129b4225/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="p-button p-button-rounded p-2 ml-2"
-          aria-label="Lien vers Linkedin d'Alexandre DEZIER"
-        >
-          <i class="pi pi-linkedin" style="font-size: 1.25rem"></i>
-        </a>
-      </span>
-    </section>
+
+      <div class="header-kpis" aria-label="Indicateurs clés">
+        <div class="kpi-badge kpi-projects">
+          <span class="kpi-icon" aria-hidden="true"><i class="pi pi-check-circle"></i></span>
+          <div class="kpi-texts">
+            <span class="kpi-value">{{ 'app.kpis.projects.value' | translate }}</span>
+            <span class="kpi-label">{{ 'app.kpis.projects.label' | translate }}</span>
+          </div>
+        </div>
+        <div class="kpi-badge kpi-experience">
+          <span class="kpi-icon" aria-hidden="true"><i class="pi pi-briefcase"></i></span>
+          <div class="kpi-texts">
+            <span class="kpi-value">{{ 'app.kpis.experience.value' | translate }}</span>
+            <span class="kpi-label">{{ 'app.kpis.experience.label' | translate }}</span>
+          </div>
+        </div>
+        <div class="kpi-badge kpi-stack">
+          <span class="kpi-icon" aria-hidden="true"><i class="pi pi-code"></i></span>
+          <div class="kpi-texts">
+            <span class="kpi-value">{{ 'app.kpis.stack.value' | translate }}</span>
+            <span class="kpi-label">{{ 'app.kpis.stack.label' | translate }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-socials">
+        <span class="socials-label">{{ 'app.networks' | translate }}</span>
+        <div class="socials-links">
+          <a
+            href="https://github.com/silvanic"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-btn"
+            [attr.aria-label]="'app.github' | translate"
+          >
+            <i class="pi pi-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/alexandre-dezier-9129b4225/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-btn"
+            [attr.aria-label]="'app.linkedin' | translate"
+          >
+            <i class="pi pi-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="header-visual" aria-hidden="true">
+      <div class="visual-glow"></div>
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALgAAACUCAMAAAAXgxO4AAAAMFBMVEX////MzMzJycn8/PzPz8/a2trS0tLX19ff39/5+fnx8fHGxsbp6ent7e3l5eX29vbb6g1QAAAFU0lEQVR4nO1c6XazOgyMdzBL3v9tP0I20sR4JMsk9x7Pz57WTIV2S5xODQ0NDQ0NW5jzNHcu+BuC6+bp/G1S+zB9nJ3SC9QL1p+4ORrzbYafsJAOSg9/ST/ZD1qFOf6Y7Pup80qrFOkne+W7qf822wfihXWW9ENvfPcbYo8BpLxBiN9mbUY7oLLein2w4zcttZ/8QGd9xeAXZf8S+YmhJFuxh+krtHuX9yIZ5ioc72HMXEb6jvlgbYmhUNpXaDUc6mDMWKolW+7H+Ze+k+N9iUjdQZrelzmTDzjGRiMn4uxDDwco+ihOe6U+VqYt5QXfUdkvdrV4K9VV5Q1nr3Toisw7dkqFYKjGfK4n7hV6rsN7rEv7giq+JdbnrZS4PzennqIny+9aGxZYi1ej69+Jx1DjwUcvhXzoNh0gE+fg8VJaCbtzgzrwMMd3ofUjXHToTpY5apg+oaQmOlDqssH/bEF5+WTLxEzg/24Fuy7mUu8gAtO7CSqWDusgpywjGjG12/UKmKEMYsrSg7SVnTN+GMwtpXxiB5pVyjKfMA46yMnwBq1qX7/vzLFwINIpMmAnIu1QtojQYSL2ibpwMM1wEHMB++wxgcNlACRySO0ymEDLRJ9kPMS8UMsXVcOsieAIoHJE+1Itx4xJ6Qj3urETdWlmjroUXEBn6B2W+vIzKHC8zjWotZflWmCMpuSiBnOIqqhyRuseUq0IZhBF5onm0FjUpBEvivtoekWKF+ihBf0h0I4qES+InnArxVH0EVWVgiYL2nPTFOKoVynoyOGPoPQUUP0jvseXR4C1Pc2OsMh5geUqOZinECWO9yDZ+QrcVibpOJgnqwIlhypbMnHYqfATLVTFSS4X7kIusDzeBr44yfclNujxi7uB51bOMHGaLuJuZeClthPceCOmQ/CV+sDLs+bvE+e5Fdj8icQNTJyZIMLesJqOM/0hfL4KpHPR6mSBZxGH3TjxEgGPQExHjhMnxeaIn1ufOEXkBIFXJ34zfyjOwSnnIcTXexuIN9hhOoy40tgQHkXBDyKu3TjnNN2MNN5HEL8ge88H14JlxPEAdEcuEOHFzw28AEQnvj/6YMD7n2LieK5yRyYQGfJoFC9XYYzq7V/zkWctmdkhZ3ZsN8GlWzsvHyfFuCu079Mypw+JMkdu8ZpzwzwtI2LsWYkzr1M445E2JXFDSa5u0DzedJ28IEW8J/tCrjdEr93/PCspcfpp7E4WZ1RclDh3FIHhVmSJc7u1vWWopSBxdn+c8SxJ4qQe8CvoSp6eemAQ50/b0GPGztUE3ge6wfJv3fB7pvuz9kIdMeQXTQlRo91uJQGPL96Il2weEIfdM1pJ3NgqGbXBG6tX7LsBuOG+whet8ZP2InIh2pAOK5vgoywY6KwbmClbiYUDfLD3HWy2rUIYfy9fZ4JaZnqRNrhOiq7eFo5knSCRa+VRhVz+uzOyLyEw0Jz1iFoF4vJuzFMvHjvM5xjaMb6CETPLwwX51RO7VzaDi6xHmLgflEUGyJMi1zoUmNA5pKUuM7Kf0HLtXQS7+SnqLjXZLLTy9umtausETo/dpyJLbD3yPVRr1fF0+w0fdV1sEehvdqQl1xfjX1Vnjh58xKtYpLeL308XE/lr2SW+obutjXbW5TjYOvMK+7nb7Fn4azGPZrncJtoWj206+YXrm8uttT1/1fMlpImfbFaPK7mz+Hr8NT4nu9QFWJsskluiH44njdPBmGy1lf8LFiuylT7jNGp2GxJA7+t9q2Ss+hWUuqc3NDQ0NPw/8JOfoIUgxPy/K4CGhn385gemGw5Ae/O/hmaMDQ0NDQ0v+Ad05zb7FcjIMAAAAABJRU5ErkJggg=="
+        alt="Alexandre DEZIER - Développeur FullStack"
+        class="header-img"
+      />
+    </div>
   </div>
-  <div class="hidden sm:block md:col-6 overflow-hidden bg-bluey">
-    <img
-      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALgAAACUCAMAAAAXgxO4AAAAMFBMVEX////MzMzJycn8/PzPz8/a2trS0tLX19ff39/5+fnx8fHGxsbp6ent7e3l5eX29vbb6g1QAAAFU0lEQVR4nO1c6XazOgyMdzBL3v9tP0I20sR4JMsk9x7Pz57WTIV2S5xODQ0NDQ0NW5jzNHcu+BuC6+bp/G1S+zB9nJ3SC9QL1p+4ORrzbYafsJAOSg9/ST/ZD1qFOf6Y7Pup80qrFOkne+W7qf822wfihXWW9ENvfPcbYo8BpLxBiN9mbUY7oLLein2w4zcttZ/8QGd9xeAXZf8S+YmhJFuxh+krtHuX9yIZ5ioc72HMXEb6jvlgbYmhUNpXaDUc6mDMWKolW+7H+Ze+k+N9iUjdQZrelzmTDzjGRiMn4uxDDwco+ihOe6U+VqYt5QXfUdkvdrV4K9VV5Q1nr3Toisw7dkqFYKjGfK4n7hV6rsN7rEv7giq+JdbnrZS4PzennqIny+9aGxZYi1ej69+Jx1DjwUcvhXzoNh0gE+fg8VJaCbtzgzrwMMd3ofUjXHToTpY5apg+oaQmOlDqssH/bEF5+WTLxEzg/24Fuy7mUu8gAtO7CSqWDusgpywjGjG12/UKmKEMYsrSg7SVnTN+GMwtpXxiB5pVyjKfMA46yMnwBq1qX7/vzLFwINIpMmAnIu1QtojQYSL2ibpwMM1wEHMB++wxgcNlACRySO0ymEDLRJ9kPMS8UMsXVcOsieAIoHJE+1Itx4xJ6Qj3urETdWlmjroUXEBn6B2W+vIzKHC8zjWotZflWmCMpuSiBnOIqqhyRuseUq0IZhBF5onm0FjUpBEvivtoekWKF+ihBf0h0I4qES+InnArxVH0EVWVgiYL2nPTFOKoVynoyOGPoPQUUP0jvseXR4C1Pc2OsMh5geUqOZinECWO9yDZ+QrcVibpOJgnqwIlhypbMnHYqfATLVTFSS4X7kIusDzeBr44yfclNujxi7uB51bOMHGaLuJuZeClthPceCOmQ/CV+sDLs+bvE+e5Fdj8icQNTJyZIMLesJqOM/0hfL4KpHPR6mSBZxGH3TjxEgGPQExHjhMnxeaIn1ufOEXkBIFXJ34zfyjOwSnnIcTXexuIN9hhOoy40tgQHkXBDyKu3TjnNN2MNN5HEL8ge88H14JlxPEAdEcuEOHFzw28AEQnvj/6YMD7n2LieK5yRyYQGfJoFC9XYYzq7V/zkWctmdkhZ3ZsN8GlWzsvHyfFuCu079Mypw+JMkdu8ZpzwzwtI2LsWYkzr1M445E2JXFDSa5u0DzedJ28IEW8J/tCrjdEr93/PCspcfpp7E4WZ1RclDh3FIHhVmSJc7u1vWWopSBxdn+c8SxJ4qQe8CvoSp6eemAQ50/b0GPGztUE3ge6wfJv3fB7pvuz9kIdMeQXTQlRo91uJQGPL96Il2weEIfdM1pJ3NgqGbXBG6tX7LsBuOG+whet8ZP2InIh2pAOK5vgoywY6KwbmClbiYUDfLD3HWy2rUIYfy9fZ4JaZnqRNrhOiq7eFo5knSCRa+VRhVz+uzOyLyEw0Jz1iFoF4vJuzFMvHjvM5xjaMb6CETPLwwX51RO7VzaDi6xHmLgflEUGyJMi1zoUmNA5pKUuM7Kf0HLtXQS7+SnqLjXZLLTy9umtausETo/dpyJLbD3yPVRr1fF0+w0fdV1sEehvdqQl1xfjX1Vnjh58xKtYpLeL308XE/lr2SW+obutjXbW5TjYOvMK+7nb7Fn4azGPZrncJtoWj206+YXrm8uttT1/1fMlpImfbFaPK7mz+Hr8NT4nu9QFWJsskluiH44njdPBmGy1lf8LFiuylT7jNGp2GxJA7+t9q2Ss+hWUuqc3NDQ0NPw/8JOfoIUgxPy/K4CGhn385gemGw5Ae/O/hmaMDQ0NDQ0v+Ad05zb7FcjIMAAAAABJRU5ErkJggg=="
-      alt="Image"
-      class="md:ml-auto block md:h-full sm:block bg-bluey"
-      style="clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%)"
-    />
-  </div>
-</div>
+</header>
 
 <main>
-  <p-tabView class="pt-3" [scrollable]="true">
-    <p-tabPanel header="Experience et études">
-      <app-experience></app-experience>
-    </p-tabPanel>
-    <p-tabPanel header="Projets annexes">
-      <app-projet-liste></app-projet-liste>
-    </p-tabPanel>
-    <p-tabPanel header="Compétences">
-      <app-competences-liste />
-    </p-tabPanel>
-  </p-tabView>
+  <p-tabs value="0" class="pt-3" [scrollable]="true">
+    <p-tablist>
+      <p-tab value="0">{{ 'tabs.experience' | translate }}</p-tab>
+      <p-tab value="1">{{ 'tabs.projects' | translate }}</p-tab>
+      <p-tab value="2">{{ 'tabs.competences' | translate }}</p-tab>
+    </p-tablist>
+    <p-tabpanels>
+      <p-tabpanel value="0">
+        <app-experience></app-experience>
+      </p-tabpanel>
+      <p-tabpanel value="1">
+        <app-projet-liste></app-projet-liste>
+      </p-tabpanel>
+      <p-tabpanel value="2">
+        <app-competences-liste />
+      </p-tabpanel>
+    </p-tabpanels>
+  </p-tabs>
 </main>
 
-<p-footer
-  class="flex justify-content-between align-items-center mx-4 sm:mx-8 my-4"
-  role="contentinfo"
->
-  <span>©2024 Alexandre DEZIER</span>
+<footer class="app-footer" role="contentinfo">
+  <span class="footer-copyright">{{ 'app.copyright' | translate }}</span>
 
   <div>
-    <span class="flex align-items-center">
+    <span class="socials-links">
       <a
         href="https://github.com/silvanic"
         target="_blank"
         rel="noopener noreferrer"
-        class="p-button p-button-rounded p-2"
+        class="social-btn"
         aria-label="Lien vers GitHub d'Alexandre DEZIER"
       >
-        <i class="pi pi-github" style="font-size: 1.25rem"></i>
+        <i class="pi pi-github"></i>
       </a>
       <a
         href="https://www.linkedin.com/in/alexandre-dezier-9129b4225/"
         target="_blank"
         rel="noopener noreferrer"
-        class="p-button p-button-rounded p-2 ml-2"
-        aria-label="Lien vers Linkedin d'Alexandre DEZIER"
+        class="social-btn"
+        aria-label="Lien vers LinkedIn d'Alexandre DEZIER"
       >
-        <i class="pi pi-linkedin" style="font-size: 1.25rem"></i>
+        <i class="pi pi-linkedin"></i>
       </a>
     </span>
   </div>
-</p-footer>
+</footer>

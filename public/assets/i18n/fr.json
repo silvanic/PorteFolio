@@ -1,0 +1,283 @@
+{
+  "app": {
+    "name": "Alexandre DEZIER",
+    "title": "FullStack Dev & Tech Experimentalist",
+    "description": "Développeur Full Stack depuis 2017, je conçois des solutions robustes du backend au frontend. Polyvalent sur le front (Angular, Vue, React) comme sur le back (Node.js, Spring Boot), je m’intéresse au parcours de la donnée de bout en bout, du serveur au client.",
+    "motivation": "Curieux et pragmatique, je transforme les besoins métier en fonctionnalités concrètes, avec une attention particulière à la qualité du code, à la maintenabilité et à la fiabilité des livraisons.",
+    "kpis": {
+      "projects": {
+        "value": "5+",
+        "label": "projets livrés"
+      },
+      "experience": {
+        "value": "8+ ans",
+        "label": "d'expérience"
+      },
+      "stack": {
+        "value": "FullStack",
+        "label": "Angular, React, Spring, Node"
+      }
+    },
+    "networks": "Mes réseaux :",
+    "github": "Lien vers GitHub d'Alexandre DEZIER",
+    "linkedin": "Lien vers LinkedIn d'Alexandre DEZIER",
+    "copyright": "©2026 Alexandre DEZIER"
+  },
+  "tabs": {
+    "experience": "Expérience et études",
+    "projects": "Projets annexes",
+    "competences": "Compétences"
+  },
+  "projets": {
+    "title": "Projets et POC",
+    "list": [
+      {
+        "name": "ETL Experiment",
+        "description": "Expérimentation ETL locale, sans backend, développée majoritairement avec l'IA. Mon objectif initial était de créer un ETL basique, tout en explorant des usages concrets de l'IA pour améliorer ma productivité (documentation, plans d'action, conception).",
+        "link": "https://etl-experiment.netlify.app",
+        "stack": ["ETL", "IA", "Vue", "PrimeVue", "VueFlow", "Pinia", "TypeScript"]
+      },
+      {
+        "name": "Showdown Score (PWA)",
+        "description": "Showdown Score est une application web conçue pour les joueurs de Showdown. Elle permet de créer et de lancer une partie, d'en suivre l'évolution et de consulter l'historique. Développée pour visualiser la progression des joueurs au fil de l'année, l'application est une Progressive Web App (PWA) installable sur n'importe quel appareil, offrant une expérience fluide et accessible à tout moment. Ce projet m'a aussi permis de travailler et d'approfondir les normes d'accessibilité.",
+        "link": "https://showdown-match.netlify.app/",
+        "stack": ["Vue 3", "PrimeVue", "Netlify"]
+      },
+      {
+        "name": "Planning Poking",
+        "description": "Un simple Planning Poker où l'on peut personnaliser la valeur des cartes, partager un lien pour rejoindre la salle, mettre à jour la configuration de la salle en temps réel. Largement inspiré d'autres Planning Poker mais simplifié. Une seconde version est en cours de développement en remplaçant Angular Material par PrimeNG afin d'améliorer l'interface",
+        "link": "https://planning-poking.deno.dev/",
+        "stack": ["Deno", "WebSocket", "Oak", "Angular", "Angular Material", "PrimeNG"],
+        "img": "assets/img/planning-poking.jpg"
+      },
+      {
+        "name": "POC Highcharts Angular",
+        "description": "Ce POC a été développé pour évaluer la faisabilité de déplacer plusieurs points sur un graphe, soit en les sélectionnant individuellement, à un index spécifique, ou au sein d'une zone de travail définie.",
+        "link": "https://github.com/silvanic/Highchart_Angular_Playground",
+        "stack": ["Angular", "Highcharts", "TypeScript"],
+        "img": "assets/img/highchart_angular.png"
+      },
+      {
+        "name": "POC Simple Chat avec le protocole MQTT",
+        "description": "Ce POC a été développé dans le but d'explorer et d'apprendre l'implémentation du protocole MQTT pour la communication en temps réel. L'objectif était de mettre en place un système de messagerie rapide et léger, adapté aux applications nécessitant des mises à jour en direct, comme la domotique, l'IoT ou la gestion de capteurs.",
+        "link": "https://mqtt-front.onrender.com/",
+        "stack": ["Angular", "Node", "Aedes"],
+        "img": "assets/img/simple_mqtt.png"
+      }
+    ]
+  },
+  "experiences": {
+    "title": "Expérience",
+    "certifications": "Formations & certifications",
+    "formations": [
+      {
+        "title": "Licence Sciences, Technologies, Santé Mention Informatique Générale en alternance, Lycée Jean Rostand (CNAM)",
+        "date": "06/2015"
+      },
+      {
+        "title": "BULATS B2",
+        "date": "06/2015"
+      },
+      {
+        "title": "BTS SIO",
+        "date": "06/2014"
+      }
+    ],
+    "list": [
+      {
+        "title": "Open (mars 2018 à ce jour)",
+        "missions": [
+          {
+            "header": "De février 2025 à fin mai 2026, pour la DIRCE (Direction Interdépartementale des Routes Centre-Est)",
+            "poste": "Développeur Front Angular",
+            "organisation": "Équipe d'un peu moins d'une vingtaine de personnes, dont 10 développeurs. En mode agile, avec des sprints de 4 semaines, accompagnés de Sprint Planning Meetings, de rétrospectives et de cadrage.",
+            "application": "Le projet SAGACITÉ est un Système d'Aide à la Gestion de Trafic (SAGT) déployé au sein des Directions Interdépartementales des Routes (DIR) pour le compte du Ministère de la Transition Écologique et Solidaire. Il offre aux opérateurs des Postes de Contrôle une interface centralisée permettant la surveillance du trafic en temps réel, la gestion des événements routiers et le pilotage des équipements dynamiques (panneaux à messages variables, capteurs…) afin d'optimiser l'exploitation et la sécurité du réseau routier national.",
+            "mission": "TMA Sagacité : maintenance corrective, évolutive et support de l'application Sagacité sur la partie front. Sagacité est un Système d'Aide à la Gestion du Trafic utilisé dans plusieurs DIR en France (Directions Interdépartementales des Routes).",
+            "activites": [
+              "Développement de fonctionnalités front-end.",
+              "Identification et résolution d'anomalies afin d'assurer le bon fonctionnement de l'application.",
+              "Accompagnement des développeurs dans l'adoption de bonnes pratiques de développement, pour une meilleure efficacité et une meilleure maintenabilité du code.",
+              "Revue du code front-end pour garantir la cohérence technique et la qualité des développements.",
+              "Fiabilisation du reste à faire (RAF) pour améliorer les futures itérations du projet.",
+              "Amélioration de la qualité du développement et anticipation des impacts des changements.",
+              "Documentation de l'utilisation de l'IA pour faciliter la compréhension et l'adoption de cette technologie."
+            ],
+            "resultat": "Réduction des corrections lors des reviews (meilleure qualité du code dès le départ). Architecture simplifiée et plus maintenable. Documentation technique améliorée grâce à l'IA, facilitant l'onboarding. Augmentation de la vélocité de l'équipe via des processus assistés par IA.",
+            "environnement": ["Jira", "Git", "Confluence", "Angular 12", "Angular Material", "OpenLayers", "Quill", "CKEditor", "Java 11", "Spring Boot", "PostgreSQL", "WSL", "SSH"]
+          },
+          {
+            "header": "De mars 2024 à juillet 2024, pour l'ANF",
+            "poste": "Développeur Front",
+            "organisation": "Équipe d'une dizaine de personnes, dont 5 développeurs. En mode agile, avec des sprints de 3 semaines, accompagnés de Sprint Planning Meetings, de rétrospectives et de cadrage.",
+            "mission": "Développement d'une nouvelle application pour la gestion de sites administratifs en utilisant des outils géographiques pour l'Administration de la nature et des forêts du Luxembourg, avec un calendrier strict imposé par la nécessité d'un MVP défini par le client.",
+            "activites": [
+              "Fiabiliser le RAF (Restant à Faire )",
+              "Identifier et anticiper les impacts",
+              "Apporter des correctifs",
+              "Assurer la qualité du code",
+              "Respecter les maquettes"
+            ],
+            "resultat": "Mise en place d'une application Angular avec cartographie (OpenLayers, GeoServer) pour la gestion de sites administratifs.",
+            "environnement": ["Angular 11", "TypeScript", "OpenLayers 5", "GeoServer", "PrimeNG", ".NET", "Jira", "PostgreSQL"]
+          },
+          {
+            "header": "De septembre 2023 à février 2024, pour le CNC",
+            "poste": "Développeur Front",
+            "organisation": "Équipe d'une vingtaine de personnes dont 10 développeurs. En mode agile, avec des sprints de 3/4 semaines accompagnés de Sprint Planning Meeting, rétrospective et cadrage.",
+            "mission": "Renforcer l'équipe front pour soutenir le développement de l'application MesAides pour la gestion des aides avec un calendrier défini par le client",
+            "activites": [
+              "Améliorer la qualité du développement en respectant les normes appliquées",
+              "Identifier et anticiper les impacts des divers développements",
+              "Apporter des correctifs pour stabiliser les différents composants",
+              "Respecter les maquettes pour garantir la conformité aux attentes du client"
+            ],
+            "resultat": "Évolution et stabilisation d'applications existantes pour la gestion de la création de nouveaux projets",
+            "environnement": ["React", "Flux", ".NET", "Jira", "Git", "Microsoft SQL Server"]
+          },
+          {
+            "header": "De décembre 2021 à septembre 2023, pour ANCV",
+            "poste": "Développeur Front",
+            "organisation": "Équipe d'une quinzaine de personnes, répartie sur trois sites (Rennes, Lannion et Paris).  Travail en mode agile avec des sprints de 3/4 semaines, incluant Sprint Planning,  rétrospectives et cadrage.",
+            "mission": "Développement d'une nouvelle application pour la Direction des Politiques Sociales de l'ANCV, permettant une gestion efficace des projets sociaux, dans un planning contraint par la nécessité de livrer un MVP aligné avec les priorités du client.",
+            "activites": [
+              "Proposer des solutions viables et maintenables",
+              "Identifier et anticiper les impacts des évolutions et corrections",
+              "Respecter le Design System en suivant les guidelines fournies et en utilisant des composants réutilisables",
+              "Alerter en cas de complexité supérieure à l'attendu",
+              "Appliquer des correctifs si nécessaire",
+              "Assurer la qualité des relectures à l'aide d'outils d'intégration continue avec Sonar",
+              "Accompagner les nouveaux arrivants sur le projet"
+            ],
+            "resultat": "Mise en place d'une application à l'aide de Next.js et Spring Boot pour la gestion de projets en respectant un design system",
+            "environnement": ["Next.js", "React", "MUI", "Redux", "React Hook Form", "Storybook", "Spring Boot", "Java 17", "PostgreSQL"]
+          },
+          {
+            "header": "De août 2021 à octobre 2021, pour ANTAI",
+            "poste": "Développeur Back",
+            "organisation": "Équipe d'une dizaine de personnes. En mode agile",
+            "mission": "Evolution d'une application existante sur le périmètre ANTAI.",
+            "activites": [
+              "Garantir de la bonne qualité des développements",
+              "Respecter les bonnes pratiques",
+              "Corriger des anomalies front et back"
+            ],
+            "resultat": "Mise en place de WebService permettant d'améliorer le parcours Numérique de l'ANTAI",
+            "environnement": ["Angular", "Spring Boot", "Java", "API REST", "Jira", "Git", "MySQL"]
+          },
+          {
+            "header": "De décembre 2020 à juillet 2021, pour CNC",
+            "poste": "Développeur Fullstack",
+            "organisation": "Équipe d'une vingtaine de personnes (développeurs, fonctionnels, testeurs...). En mode agile",
+            "mission": "Développement et maintien de multiples applications (web, serveur, rapports SSRS, ETL)",
+            "activites": [
+              "Conception d'application SSIS",
+              "Mise à jour de rapport SSRS",
+              "Développer des API et batch",
+              "Correction d'anomalies front et back",
+              "Rédaction de documentation pour PowerBI"
+            ],
+            "resultat": "Développement d'une application SSIS permettant de faciliter la compréhension de l'utilisation des différentes tables existantes, afin d'y appliquer diverses statistiques.",
+            "environnement": ["ETL", "SSIS", "SSRS", "C#", "API REST", "React", "Microsoft Server SQL", "Jira", "Git", "MySQL"]
+          },
+          {
+            "header": "De 2017 à juin 2020, pour ENIM",
+            "poste": "Développeur Fullstack",
+            "organisation": "Collaboration avec une équipe de 5 développeurs, sous la direction de plusieurs chefs de projet et d'un architecte technique.",
+            "mission": "Développer et maintenir plusieurs applications web pour automatiser et optimiser le suivi des démarches administratives pour l'ENIM (marins, tiers, etc.).",
+            "activites": [
+              "Conception, évolution et maintenance d'applications web",
+              "Mise en place d'un exécutable Talend pour récupérer, filtrer et mettre à jour des données dans une table Oracle. ",
+              "Extraction de données et génération de rapports sous forme de fichiers Excel.",
+              "Amélioration des batchs existants et développement de nouveaux batchs. ",
+              "Déploiement et test de webservices SOAP"
+            ],
+            "resultat": "Développement d'outils permettant d'optimiser les traitements liés au suivi des démarches pour les marins et tiers, en utilisant Talend, Java/Struts 2 et d'autres outils.",
+            "environnement": ["Dozer", "Java 6/7", "Jenkins", "Jenkins", "jQuery", "JSP", "Redmine", "SoapUI", "Sonar", "Spring", "Struts 2", "Talend"]
+          }
+        ]
+      },
+      {
+        "title": "NCI (Octobre 2014 à septembre 2015)",
+        "missions": [
+          {
+            "poste": "Développeur d'application",
+            "organisation": "Equipe de 5 développeurs dont un chef d'équipe et un responsable technique",
+            "mission": "Développer des fonctionnalités et mettre en place des tests d'intégration pour diverses applications pour le pôle Transport",
+            "activites": [
+              "Créer des tests d'intégrations ainsi que leurs reportings",
+              "Développer des composants et interfaces graphiques et les diffuser",
+              "Former à l'utilisation de TestComplet 10"
+            ],
+            "resultat": "Mise en place de plusieurs évolutions pour le pôle Transport, incluant des améliorations des interfaces et des reportings. En parallèle, création de tests d'intégration et ajout de leurs résultats dans les reportings.",
+            "environnement": ["Delphi XE2", "TestComplete 10", "SQL Server", "Suite Office", "Tortoise SVN"]
+          }
+        ]
+      },
+      {
+        "title": "Androme Informatique (janvier 2014 à mars 2014)",
+        "missions": [
+          {
+            "poste": "Développeur Web",
+            "organisation": "Équipe de 2 développeurs dont mon maître de stage",
+            "mission": "Mutualisation de 3 applications web pour la gestion de paroisses religieuses",
+            "activites": [
+              "Analyse du cahier des charges",
+              "Connaissance des anciennes applications",
+              "Création d'une base de données MySQL",
+              "Développement d'une interface responsive"
+            ],
+            "resultat": "Création de certaines fonctionnalités pour faciliter la gestion de paroisse ainsi qu'une application pour gérer les entrées téléphoniques et des clients dans une boutique",
+            "environnement": ["HTML", "CSS3", "JavaScript", "jQuery", "CakePHP 3", "MySQL"]
+          }
+        ]
+      },
+      {
+        "title": "Rectorat de Caen (mai 2013 à juin 2013)",
+        "missions": [
+          {
+            "poste": "Développeur Web",
+            "organisation": "Autonomie accompagnée du Pôle DSI",
+            "mission": "Mutualisation de 3 applications web pour la gestion du droit d'accueil",
+            "activites": [
+              "Analyse du cahier des charges",
+              "Analyse des applications existantes",
+              "Documentation du droit d'accueil",
+              "Création d'une application web (HTML, CSS, JS et PHP) et d'une base de données MySQL"
+            ],
+            "resultat": "Développement d'une partie de l'application de gestion ainsi qu'une meilleure capacité d'analyse et d'esprit d'équipe",
+            "environnement": ["HTML", "CSS3", "JavaScript", "jQuery", "WAMPP", "MySQL"]
+          }
+        ]
+      }
+    ]
+  },
+  "competences": {
+    "title": "Compétences",
+    "categories": {
+      "frontend": {
+        "name": "Frontend",
+        "skills": ["Angular (7+ ans)", "React (2 ans)", "Vue.js (1 an)", "TypeScript (5+ ans)", "JavaScript", "HTML5", "CSS3", "SCSS", "Responsive Design"]
+      },
+      "backend": {
+        "name": "Backend",
+        "skills": ["Node.js (5+ ans)", "Express (3 ans)", "Spring Boot (4 ans)", "Java (6+ ans)", "API REST", "WebSocket"]
+      },
+      "databases": {
+        "name": "Bases de Données",
+        "skills": ["PostgreSQL (6+ ans)", "MySQL (6+ ans)", "SQL Server (3 ans)", "MongoDB (1 an)", "SQL", "ORM"]
+      },
+      "devops": {
+        "name": "DevOps & Outils",
+        "skills": ["Git (7+ ans)", "Jira (6+ ans)", "Docker (2 ans)", "Jenkins (3 ans)", "GitLab CI/CD", "Linux"]
+      },
+      "methodologies": {
+        "name": "Méthodologies",
+        "skills": ["Agile", "Scrum", "Kanban", "TDD", "Code Review", "Documentation technique"]
+      },
+      "tools": {
+        "name": "Outils & Frameworks",
+        "skills": ["VS Code", "Webpack", "Vite", "NPM", "PrimeNG (3+ ans)", "Storybook", "Postman", "Figma"]
+      }
+    }
+  }
+}
