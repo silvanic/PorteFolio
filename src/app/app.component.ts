@@ -43,6 +43,7 @@ export class AppComponent {
     this.titleService.setTitle(title);
 
     // SEO standard
+    this.meta.updateTag({ name: 'title', content: title });
     this.meta.updateTag({ name: 'description', content: description });
     this.meta.updateTag({ name: 'author', content: name });
     this.meta.updateTag({ name: 'copyright', content: name });
