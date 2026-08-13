@@ -35,8 +35,8 @@ export class AppComponent {
   ngOnInit(): void {
     const name = this.i18nService.get('app.name');
     const role = this.i18nService.get('app.title');
-    const title = `Portfolio d'${name}`;
-    const description = `Portfolio du développeur Fullstack ${name}`;
+    const title = `Portefolio d'${name}`;
+    const description = `Portefolio du développeur Fullstack ${name}`;
     const image = 'assets/img/shared.jpg';
     const url = window.location.href;
 
@@ -49,7 +49,7 @@ export class AppComponent {
     this.meta.updateTag({ name: 'copyright', content: name });
     this.meta.updateTag({
       name: 'keywords',
-      content: `Portfolio, développeur, fullstack, front, informatique, ${name}`,
+      content: `Portefolio,portfolio, développeur, fullstack, front, informatique, ${name}`,
     });
 
     // Open Graph
