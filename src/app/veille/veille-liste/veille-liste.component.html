@@ -1,0 +1,9 @@
+<div class="veille-container">
+  <h2>{{ 'veille.title' | translate }}</h2>
+  
+  <div class="veille-list">
+    @for (veille of veilles; track veille.title) {
+      <app-veille-item [veille]="veille" />
+    }
+  </div>
+</div>

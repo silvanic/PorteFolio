@@ -1,13 +1,16 @@
 <div class="competences-container">
-  <div *ngFor="let categoryKey of categoryKeys" class="competence-category">
-    <h3 class="category-title">{{ categories[categoryKey].name }}</h3>
-    
-    <div class="skills-grid">
-      <p-chip 
-        *ngFor="let skill of categories[categoryKey].skills"
-        [label]="skill"
-        styleClass="skill-chip"
-      />
+  @for (categoryKey of categoryKeys; track categoryKey) {
+    <div class="competence-category">
+      <h3 class="category-title">{{ categories[categoryKey].name }}</h3>
+      
+      <div class="skills-grid">
+        @for (skill of categories[categoryKey].skills; track skill) {
+          <p-chip 
+            [label]="skill"
+            styleClass="skill-chip"
+          />
+        }
+      </div>
     </div>
-  </div>
+  }
 </div>

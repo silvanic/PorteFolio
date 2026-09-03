@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Alexandre DEZIER",
-    "title": "FullStack Dev & Tech Experimentalist",
+    "title": "Développeur Full-Stack",
     "description": "Développeur Full Stack depuis 2017, je conçois des solutions robustes du backend au frontend. Polyvalent sur le front (Angular, Vue, React) comme sur le back (Node.js, Spring Boot), je m’intéresse au parcours de la donnée de bout en bout, du serveur au client.",
     "motivation": "Curieux et pragmatique, je transforme les besoins métier en fonctionnalités concrètes, avec une attention particulière à la qualité du code, à la maintenabilité et à la fiabilité des livraisons.",
     "kpis": {
@@ -26,6 +26,7 @@
   "tabs": {
     "experience": "Expérience et études",
     "projects": "Projets annexes",
+    "veille": "Veille technologique",
     "competences": "Compétences"
   },
   "projets": {
@@ -279,5 +280,58 @@
         "skills": ["VS Code", "Webpack", "Vite", "NPM", "PrimeNG (3+ ans)", "Storybook", "Postman", "Figma"]
       }
     }
+  },
+  "veille": {
+    "title": "Veille technologique",
+    "list": [
+      {
+        "title": "Community Access - Agents IA pour l'accessibilité",
+        "description": "Exploration d'agents IA spécialisés pour l'accessibilité. Ressource intéressante pour automatiser la vérification et l'amélioration des règles d'accessibilité (a11y) dans une codebase, en garantissant une meilleure inclusivité.",
+        "date": "août 2026",
+        "category": "Accessibilité & Automatisation",
+        "source": "GitHub",
+        "link": "https://github.com/Community-Access/accessibility-agents"
+      },
+      {
+        "title": "Vue Flow",
+        "description": "Vue Flow est une librairie pour créer des éditeurs visuels node-based. J'explore son potentiel pour construire des interfaces interactives où les utilisateurs peuvent composer des pipelines de transformation graphiquement, en connectant des noeuds représentant des opérations.",
+        "date": "juillet 2026",
+        "category": "Expérimentation avec IA",
+        "source": "GitHub",
+        "link": "https://github.com/bcakmakoglu/vue-flow"
+      },
+      {
+        "title": "Vite PWA",
+        "description": "Vite PWA est un plugin pour transformer une application Vite en Progressive Web App sans configuration complexe. Framework-agnostic, il permet d'ajouter les capacités PWA (installabilité, offline, etc.) indépendamment de la stack utilisée.",
+        "date": "juin 2026",
+        "category": "Implémentation du plugin",
+        "source": "Site web du plugin",
+        "link": "https://vite-pwa-org.netlify.app/"
+      },
+      {
+        "title": "VS Code Agent Skills",
+        "description": "Exploration de VS Code Agent Skills pour la customization des assistants IA. Implémentation sur le projet Sagacité pour créer des agents spécialisés capables de comprendre le contexte projet et d'améliorer la productivité de l'équipe.",
+        "date": "février 2026",
+        "category": "IA & Customization",
+        "source": "Documentation VS Code",
+        "link": "https://code.visualstudio.com/docs/agent-customization/agent-skills"
+      },
+      {
+        "title": "Playwright",
+        "description": "Playwright pour E2E testing. Exploration des capacités de cet outil pour valider les parcours utilisateur complexes en environnement multi-navigateur, avec une couverture fiable et maintenable.",
+        "date": "janvier 2026",
+        "category": "E2E Testing",
+        "source": "Site officiel",
+        "link": "https://playwright.dev/"
+      },
+      {
+        "title": "Roadmap.sh - Full-Stack",
+        "description": "Roadmap.sh - Full-Stack pour structurer et valider ma progression. Outil intéressant pour identifier les tendances émergentes, vérifier la couverture de ma stack (frontend, backend, DevOps) et anticiper les technologies à explorer.",
+        "date": "2025-2026",
+        "category": "Ressource d'apprentissage",
+        "source": "Roadmap.sh",
+        "link": "https://roadmap.sh/full-stack"
+      }
+    ]
   }
 }

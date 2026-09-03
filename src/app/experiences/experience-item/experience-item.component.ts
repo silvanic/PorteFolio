@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { AccordionModule } from 'primeng/accordion';
 import { CardModule } from 'primeng/card';
@@ -9,7 +8,7 @@ import { Mission } from '../experience/experience.component';
 @Component({
   selector: 'app-experience-item',
   standalone: true,
-  imports: [AccordionModule, CardModule, PanelModule, ChipModule, CommonModule],
+  imports: [AccordionModule, CardModule, PanelModule, ChipModule],
   templateUrl: './experience-item.component.html',
   styleUrls: ['./experience-item.component.scss'],
 })

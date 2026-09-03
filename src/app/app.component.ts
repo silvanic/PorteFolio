@@ -6,6 +6,7 @@ import { ProjetListeComponent } from './projets/projet-liste/projet-liste.compon
 import { Meta } from '@angular/platform-browser';
 import { Title } from '@angular/platform-browser';
 import { CompetencesListeComponent } from './competences/competences-liste/competences-liste.component';
+import { VeilleListeComponent } from './veille/veille-liste/veille-liste.component';
 import { I18nService } from './services/i18n.service';
 import { TranslatePipe } from './pipes/translate.pipe';
 
@@ -17,6 +18,7 @@ import { TranslatePipe } from './pipes/translate.pipe';
     ButtonModule,
     TabsModule,
     ProjetListeComponent,
+    VeilleListeComponent,
     CompetencesListeComponent,
     TranslatePipe,
   ],

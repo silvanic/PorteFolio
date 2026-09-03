@@ -1,0 +1,67 @@
+.veille-item {
+  padding: 1.5rem;
+  border: 1px solid var(--surface-border);
+  border-radius: 8px;
+  background: var(--surface-0);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+  }
+}
+
+.veille-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.veille-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+}
+
+.veille-date {
+  font-size: 0.85rem;
+  color: var(--text-color-secondary);
+  white-space: nowrap;
+}
+
+.veille-description {
+  margin: 0.5rem 0 1rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.veille-footer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.veille-category {
+  display: inline-block;
+  background: var(--primary-color);
+  color: var(--primary-color-text);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.veille-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--primary-color-highlight);
+  }
+}

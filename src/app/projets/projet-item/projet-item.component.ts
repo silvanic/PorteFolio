@@ -1,15 +1,14 @@
-import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { SlicePipe } from '@angular/common';
 import { IProjet } from '../projet-liste/projet-liste.component';
 import { PanelModule } from 'primeng/panel';
 import { ChipModule } from 'primeng/chip';
-import { RatingModule } from 'primeng/rating';
 import { ImageModule } from 'primeng/image';
 
 @Component({
   selector: 'app-projet-item',
   standalone: true,
-  imports: [CommonModule, PanelModule, ChipModule, ImageModule],
+  imports: [PanelModule, ChipModule, ImageModule, SlicePipe],
   templateUrl: './projet-item.component.html',
   styleUrls: ['./projet-item.component.scss'],
 })

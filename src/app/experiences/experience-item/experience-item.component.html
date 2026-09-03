@@ -15,67 +15,82 @@
 
   <div class="mission-content">
     <!-- Organisation -->
-    <div *ngIf="mission.organisation.length" class="mission-field">
-      <div class="field-header">
-        <i class="pi pi-building"></i>
-        <span class="field-label">Organisation</span>
+    @if (mission.organisation.length) {
+      <div class="mission-field">
+        <div class="field-header">
+          <i class="pi pi-building"></i>
+          <span class="field-label">Organisation</span>
+        </div>
+        <div class="field-value">{{ mission.organisation }}</div>
       </div>
-      <div class="field-value">{{ mission.organisation }}</div>
-    </div>
+    }
 
     <!-- Application -->
-    <div *ngIf="mission.application?.length" class="mission-field">
-      <div class="field-header">
-        <i class="pi pi-window-maximize"></i>
-        <span class="field-label">Application</span>
+    @if (mission.application?.length) {
+      <div class="mission-field">
+        <div class="field-header">
+          <i class="pi pi-window-maximize"></i>
+          <span class="field-label">Application</span>
+        </div>
+        <div class="field-value">{{ mission.application }}</div>
       </div>
-      <div class="field-value">{{ mission.application }}</div>
-    </div>
+    }
 
     <!-- Mission -->
-    <div *ngIf="mission.mission.length" class="mission-field">
-      <div class="field-header">
-        <i class="pi pi-check-circle"></i>
-        <span class="field-label">Mission</span>
+    @if (mission.mission.length) {
+      <div class="mission-field">
+        <div class="field-header">
+          <i class="pi pi-check-circle"></i>
+          <span class="field-label">Mission</span>
+        </div>
+        <div class="field-value">{{ mission.mission }}</div>
       </div>
-      <div class="field-value">{{ mission.mission }}</div>
-    </div>
+    }
 
     <!-- Activités -->
-    <div *ngIf="mission.activites.length" class="mission-field">
-      <div class="field-header">
-        <i class="pi pi-list"></i>
-        <span class="field-label">Activités</span>
+    @if (mission.activites.length) {
+      <div class="mission-field">
+        <div class="field-header">
+          <i class="pi pi-list"></i>
+          <span class="field-label">Activités</span>
+        </div>
+        <ul class="activities-list">
+          @for (activite of mission.activites; track $index) {
+            <li class="activity-item">
+              {{ activite }}
+            </li>
+          }
+        </ul>
       </div>
-      <ul class="activities-list">
-        <li *ngFor="let activite of mission.activites" class="activity-item">
-          {{ activite }}
-        </li>
-      </ul>
-    </div>
+    }
 
     <!-- Résultat -->
-    <div *ngIf="mission.resultat.length" class="mission-field">
-      <div class="field-header">
-        <i class="pi pi-trophy"></i>
-        <span class="field-label">Résultat</span>
+    @if (mission.resultat.length) {
+      <div class="mission-field">
+        <div class="field-header">
+          <i class="pi pi-trophy"></i>
+          <span class="field-label">Résultat</span>
+        </div>
+        <div class="field-value">{{ mission.resultat }}</div>
       </div>
-      <div class="field-value">{{ mission.resultat }}</div>
-    </div>
+    }
 
     <!-- Environnement -->
-    <div *ngIf="mission.environnement.length" class="mission-field mission-field-last">
-      <div class="field-header">
-        <i class="pi pi-code"></i>
-        <span class="field-label">Environnement technique</span>
+    @if (mission.environnement.length) {
+      <div class="mission-field mission-field-last">
+        <div class="field-header">
+          <i class="pi pi-code"></i>
+          <span class="field-label">Environnement technique</span>
+        </div>
+        <div class="tech-chips">
+          @for (tech of mission.environnement; track tech) {
+            <p-chip
+              [label]="tech"
+              styleClass="tech-chip"
+            ></p-chip>
+          }
+        </div>
       </div>
-      <div class="tech-chips">
-        <p-chip
-          *ngFor="let tech of mission.environnement"
-          [label]="tech"
-          styleClass="tech-chip"
-        ></p-chip>
-      </div>
-    </div>
+    }
   </div>
 </p-panel>

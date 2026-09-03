@@ -1,31 +1,34 @@
 <article class="projet-card">
   <!-- Image Section -->
-  <div *ngIf="projet.img" class="projet-image">
-    <p-image
-      [src]="projet.img"
-      [alt]="'Image - ' + projet.name"
-      [title]="projet.name"
-      imageClass="projet-img"
-      [preview]="true"
-    />
-    <div class="image-overlay"></div>
-  </div>
+  @if (projet.img) {
+    <div class="projet-image">
+      <p-image
+        [src]="projet.img"
+        [alt]="'Image - ' + projet.name"
+        [title]="projet.name"
+        imageClass="projet-img"
+        [preview]="true"
+      />
+      <div class="image-overlay"></div>
+    </div>
+  }
 
   <!-- Content Section -->
   <div class="projet-content">
     <!-- Header with Title -->
     <div class="content-header">
       <h3 class="projet-title">{{ projet.name }}</h3>
-      <a
-        *ngIf="projet.link"
-        [href]="projet.link"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="projet-link-btn"
-        [attr.aria-label]="'Ouvrir ' + projet.name"
-      >
-        <i class="pi pi-external-link"></i>
-      </a>
+      @if (projet.link) {
+        <a
+          [href]="projet.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="projet-link-btn"
+          [attr.aria-label]="'Ouvrir ' + projet.name"
+        >
+          <i class="pi pi-external-link"></i>
+        </a>
+      }
     </div>
 
     <!-- Description -->
@@ -33,24 +36,27 @@
 
     <!-- Tech Stack -->
     <div class="tech-stack">
-      <p-chip
-        *ngFor="let tech of projet.stack"
-        [label]="tech"
-        styleClass="tech-chip"
-      />
+      @for (tech of projet.stack; track tech) {
+        <p-chip
+          [label]="tech"
+          styleClass="tech-chip"
+        />
+      }
     </div>
 
     <!-- Link Display -->
-    <div *ngIf="projet.link" class="projet-link-display">
-      <i class="pi pi-link"></i>
-      <a
-        [href]="projet.link"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="link-text"
-      >
-        {{ projet.link | slice:8:50 }}{{ (projet.link || '').length > 50 ? '...' : '' }}
-      </a>
-    </div>
+    @if (projet.link) {
+      <div class="projet-link-display">
+        <i class="pi pi-link"></i>
+        <a
+          [href]="projet.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link-text"
+        >
+          {{ projet.link | slice:8:50 }}{{ (projet.link || '').length > 50 ? '...' : '' }}
+        </a>
+      </div>
+    }
   </div>
 </article>

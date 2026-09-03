@@ -75,7 +75,8 @@
     <p-tablist>
       <p-tab value="0">{{ 'tabs.experience' | translate }}</p-tab>
       <p-tab value="1">{{ 'tabs.projects' | translate }}</p-tab>
-      <p-tab value="2">{{ 'tabs.competences' | translate }}</p-tab>
+      <p-tab value="2">{{ 'tabs.veille' | translate }}</p-tab>
+      <p-tab value="3">{{ 'tabs.competences' | translate }}</p-tab>
     </p-tablist>
     <p-tabpanels>
       <p-tabpanel value="0">
@@ -85,6 +86,9 @@
         <app-projet-liste></app-projet-liste>
       </p-tabpanel>
       <p-tabpanel value="2">
+        <app-veille-liste></app-veille-liste>
+      </p-tabpanel>
+      <p-tabpanel value="3">
         <app-competences-liste />
       </p-tabpanel>
     </p-tabpanels>

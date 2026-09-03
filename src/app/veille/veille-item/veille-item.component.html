@@ -1,0 +1,21 @@
+<div class="veille-item">
+  <div class="veille-header">
+    <h3 class="veille-title">{{ veille.title }}</h3>
+    <span class="veille-date">{{ veille.date }}</span>
+  </div>
+
+  <p class="veille-description">{{ veille.description }}</p>
+
+  <div class="veille-footer">
+    @if (veille.category) {
+      <span class="veille-category">
+        {{ veille.category }}
+      </span>
+    }
+    @if (veille.link) {
+      <a [href]="veille.link" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'Lire : ' + veille.title" class="veille-link">
+        {{ veille.source || 'Lire plus →' }}
+      </a>
+    }
+  </div>
+</div>

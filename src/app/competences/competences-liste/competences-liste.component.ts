@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChipModule } from 'primeng/chip';
 import { I18nService } from '../../services/i18n.service';
-import { NgFor } from '@angular/common';
 
 export interface CompetenceCategory {
   name: string;
@@ -11,7 +10,7 @@ export interface CompetenceCategory {
 @Component({
   selector: 'app-competences-liste',
   standalone: true,
-  imports: [ChipModule, NgFor],
+  imports: [ChipModule],
   templateUrl: './competences-liste.component.html',
   styleUrls: ['./competences-liste.component.scss'],
 })
